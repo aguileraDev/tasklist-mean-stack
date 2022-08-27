@@ -1,0 +1,78 @@
+<div class="navbar-fixed">
+  <nav class="teal darken-1">
+  <div class="nav-wrapper row">
+    <div class="col s12 m12 l12">
+      <h5 class="center-align">MEAN Tasklist App</h5>
+    </div>
+  </div>
+</nav>
+</div>
+
+<div class="container mbsm">
+  <h4 class="subtitle valign-wrapper">
+    <span><i class="material-icons left fs60">account_circle</i></span
+    >Welcome! {{ user.username }}
+  </h4>
+  <table class="highlight">
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let listaTareas of tasks">
+        <td>{{ listaTareas.nombre }}</td>
+        <td>
+          <a
+            (click)="update(listaTareas)"
+            class="waves-effect waves-light btn teal darken-1"
+            >Update</a
+          >
+        </td>
+        <td>
+          <a
+            (click)="delete(listaTareas._id)"
+            class="waves-effect waves-light btn red darken-1"
+            >Delete</a
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+  <div class="row valign-wrapper">
+    <form [formGroup]="formuTask" class="col s8 m4 offset-m2 l4 offset-l3">
+      <div class="input-field col s12 m12 l12">
+        <i class="material-icons prefix">article</i>
+        <input
+          formControlName="newTask"
+          id="createTask"
+          type="text"
+          class="validate"
+          placeholder="New Task"
+        />
+      </div>
+    </form>
+
+    <div class="col m6 l6">
+      <a
+        (click)="create()"
+        class="waves-effect waves-light btn mesm bmw light-blue darken-1"
+        ><i class="material-icons left">add</i>Create</a
+      >
+    </div>
+  </div>
+
+
+<div class="container">
+  <div class="row valign-wrapper">
+    <div class="col s12 m12 l12 center-align">
+      <a (click)="logout()" class="waves-effect waves-light btn orange darken-4"><i class="material-icons left">login</i>Logout</a>
+    </div>
+  </div>
+</div>

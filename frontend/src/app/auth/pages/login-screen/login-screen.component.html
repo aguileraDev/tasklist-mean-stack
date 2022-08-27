@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 m6 l6 offset-m3 offset-l3">
+      <h2 class="center-align">Login</h2>
+    </div>
+    <form [formGroup]="formuLogin" (ngSubmit)="login()" class="col s12 m6 l6 offset-m3 offset-l3">
+      <div class="row">
+        <div class="input-field col s12">
+          <input formControlName="email" id="email" type="email" class="validate" />
+          <label for="email">Email</label>
+          <span class="helper-text" data-error="wrong" data-success="right">
+            email@example.com</span
+          >
+        </div>
+        <div class="input-field col s12">
+          <input formControlName="password" id="password" type="password" class="validate" />
+          <label for="password">Password</label>
+          <span class="helper-text" data-error="wrong" data-success="right">
+            minimum 8 caracters</span
+          >
+        </div>
+        <a class="col s12 right-align" routerLink="/auth/register">Create account</a>
+        <div class="col s12">
+          <button class="btn waves-effect waves-light light-blue darken-1" type="submit" name="action">Login
+              <i class="material-icons right">send</i>
+            </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>

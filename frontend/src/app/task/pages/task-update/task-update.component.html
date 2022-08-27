@@ -1,0 +1,29 @@
+<div class="container position">
+  <div class="row valign-wrapper">
+    <form
+      [formGroup]="formUpdate"
+      (ngSubmit)="updateTask()"
+      class="col s12 m6 l6 offset-m2 offset-l2"
+    >
+      <div class="input-field col s12 m12 l12">
+        <i class="material-icons prefix">article</i>
+        <input
+          formControlName="newTask"
+          id="updateTask"
+          type="text"
+          class="validate"
+          minlength="4"
+        />
+        <label for="updateTask">New Task</label>
+      </div>
+      <div class="col s12 m12 l4 center">
+        <button
+          type="submit"
+          class="waves-effect waves-light btn light-blue darken-1"
+        >
+          <i class="material-icons left">add</i>Update
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
