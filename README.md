@@ -1,6 +1,10 @@
 # App lista de tareas
 
-SPA con las funcionalidades de un crud 
+SPA con las funcionalidades de un crud
+
+Usuario existente
+admin@example.com
+12345678
 
 # Frontend 
 
